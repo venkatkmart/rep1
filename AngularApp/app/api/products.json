@@ -1,0 +1,30 @@
+{
+    "products": [{
+            "modelName": "Moto E3 Power(Black, 16GB)",
+            "imageUrl": "app/products/images/1.jpeg",
+            "modelPrice": "7,999",
+            "featureList": ["2 GB RAM | 16 GB ROM | Expandable Upto 32 GB", "5 inch HD Display", "8MP Primary Camera | 5MP Front", "3500 mAh Battery", "MT6735p 64-bit Processor", "1 Year Manufacturer Warranty"]
+      },
+        {
+            "modelName": "Moto E3 Power(Black, 16GB)",
+            "imageUrl": "app/products/images/1.jpeg",
+            "modelPrice": "7,999",
+            "featureList": ["2 GB RAM | 16 GB ROM | Expandable Upto 32 GB", "5 inch HD Display", "8MP Primary Camera | 5MP Front", "3500 mAh Battery", "MT6735p 64-bit Processor", "1 Year Manufacturer Warranty"]
+      },
+        {
+            "modelName": "Moto E3 Power(Black, 16GB)",
+            "imageUrl": "app/products/images/1.jpeg",
+            "modelPrice": "7,999",
+            "featureList": ["2 GB RAM | 16 GB ROM | Expandable Upto 32 GB", "5 inch HD Display", "8MP Primary Camera | 5MP Front", "3500 mAh Battery", "MT6735p 64-bit Processor", "1 Year Manufacturer Warranty"]
+      },
+
+        {
+            "modelName": "Apple iPhone 6 (Space Grey, 16 GB)",
+            "imageUrl": "app/products/images/2.jpeg",
+            "modelPrice": "36,990",
+            "featureList": ["1 GB RAM | 16 GB ROM |", "4.7 inch Retina HD Display", "8MP Primary Camera | 1.2MP Front", "Li-Ion Battery", "A8 Chip with 64-bit Architecture and M8 Motion Co-processor Processor", "1 Year Manufacturer Warranty"]
+      }
+
+
+    ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "flipsnap",
+  "homepage": "https://github.com/kiranuidev/LearnAngular-Sep-9am",
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "angularjs#^1.5.8",
+    "underscore": "^1.8.3",
+    "angular-bootstrap": "^2.2.0"
+  }
+}

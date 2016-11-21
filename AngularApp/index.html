@@ -1,0 +1,76 @@
+<html ng-app="flipsnap">
+
+<head>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+</head>
+
+<body>
+    <div class="container" ng-controller="headerCtrl">
+
+        <!--header-->
+        <div ng-include="headerUrl"></div>
+        <!--Cotent-->
+        <div ng-include="contentUrl"></div>
+        <!--footer-->
+        <div ng-include=""></div>
+
+
+    </div>
+    <!--header files-->
+    <script src="app/header/header.js"></script>
+    <script src="app/header/headerCtrl.js"></script>
+    <!--end of header-->
+
+    <!--Register files-->
+    <script src="app/register/register.js"></script>
+    <script src="app/register/registerCtrl.js"></script>
+    <!--end of register-->
+    <!--Lookup module-->
+    <script src="app/lookup/lookup.js"></script>
+    <script src="app/lookup/lookupSvc.js"></script>
+    <!--product-->
+    <script src="app/product/product.js"></script>
+    <script src="app/product/productSvc.js"></script>
+    <script src="app/product/productFact.js"></script>
+    <script src="app/product/productCtrl.js"></script>
+
+    
+    <script src="app/custom/custom.js"></script>
+    <script src="app/custom/customPhone.js"></script>
+    <!--main files-->
+    <script src="app/app.js"></script>
+
+    <!--end of main-->
+    <script type="text/ng-template" id="customTemplate.html">
+  <a>
+      <img ng-src="http://upload.wikimedia.org/wikipedia/commons/thumb/{{match.model.flag}}" width="16">
+      <span ng-bind-html="match.label | uibTypeaheadHighlight:query"></span>
+  </a>
+</script>
+
+<script type="text/ng-template" id="customPopupTemplate.html">
+  <div class="custom-popup-wrapper"
+     ng-style="{top: position().top+'px', left: position().left+'px'}"
+     style="display: block;"
+     ng-show="isOpen() && !moveInProgress"
+     aria-hidden="{{!isOpen()}}">
+    <p class="message">select location from drop down.</p>
+
+    <ul class="dropdown-menu" role="listbox">
+      <li class="uib-typeahead-match" ng-repeat="match in matches track by $index" ng-class="{active: isActive($index) }"
+        ng-mouseenter="selectActive($index)" ng-click="selectMatch($index)" role="option" id="{{::match.id}}">
+        <div uib-typeahead-match index="$index" match="match" query="query" template-url="templateUrl"></div>
+      </li>
+    </ul>
+  </div>
+</script>
+</body>
+
+</html>

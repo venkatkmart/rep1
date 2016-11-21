@@ -1,0 +1,65 @@
+<!--<div ng-controller="productCtrl">
+    <h1>Products</h1>
+    <h1>{{$scope.counter}}</h1>
+    <table class="table table-striped">
+
+        <tr>
+            <td>S.No</td>
+            <td>Model Name</td>
+            <td>Price</td>
+        </tr>
+        <tr ng-repeat="product in products">
+            <td>{{$index+1}}</td>
+            <td>{{product.modelName}}</td>
+            <td>{{product.modelPrice}}</td>
+            <td>
+                <button class="btn btn-primary" ng-if="!product.selected" ng-click="addToCart(product)">Add To Cart</button>
+                <button class="btn btn-warning" ng-if="product.selected" ng-click="removeFromCart(product)">Remove From Cart</button>
+            </td>
+        </tr>
+    </table>
+</div>-->
+<div ng-controller="productCtrl">
+    <div class="row">
+        <div class="col-md-2">
+            <input type="text" ng-model="searchMake"
+                   class="form-control"
+                   placeholder="Search By Make">
+        </div>
+        <div class="col-md-2">
+            <input type="text" ng-model="searchModel"
+                   class="form-control"
+                   placeholder="Search By Model">
+        </div>
+        <button class="btn btn-primary" ng-click="country='IN'">India</button>
+          <button class="btn btn-primary" ng-click="country='US'">US</button>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>S.No</td>
+                <td>Year</td>
+                <td>Make</td>
+                <td>Model</td>
+                <td ng-click="sortByPrice()"><a href="">Price</a></td>
+                   <td ng-click="showMore()"><a href="">Show More</a></td>
+                  <td ng-click="showLess()"><a href="">Show Less</a></td>
+            </tr>
+        </thead>
+     <!--   <tr ng-repeat="vehicle in vehicles 
+                       |filter:{Model:searchModel}
+                       |filter:{Make:searchMake}">-->
+        <tr ng-repeat="vehicle in vehicles 
+                       |filter:{Model:searchModel,Make:searchMake}
+                       |orderBy:orderByPrice
+                       |limitTo:recordCount"}>
+            <td>{{$index+1}}</td>
+            <td>{{vehicle.Year}}</td>
+            <td>{{vehicle.Make}}</td>
+            <td>{{vehicle.Model}}</td>
+   <td>{{vehicle.Price|currency:"Rs."}}</td>
+               <td>{{vehicle.Contact|phoneFomatter:country}}</td>
+        </tr>
+    </table>
+
+</div>
